@@ -1,13 +1,8 @@
-month = int(input('введите месяц от 1 до 12: '))
-season = ['зима','весна','лето', 'осень']
-dict_season
-if month< 3 or month==12:
-    print(f'Это {season[0]}')
-elif month>2 and month<6:
-    print(f'Это {season[1]}')
-elif month >5 and month<9:
-    print(f'Это {season[2]}')
-elif month>8 and month<12:
-    print(f'Это {season[2]}')
-else:
-    print('Введите целое число от 1 до 12, будьте внимательны ')
+while True:
+    month = input('введите месяц от 1 до 12: ')
+    if month.isdigit() and 0 < int(month) <= 12:
+        season_dic = {0: 'зима', 1: 'весна', 2: 'лето', 3: 'осень', 4: 'зима'}
+        print(f'{season_dic[int(month) // 3]}')
+        break
+    else:
+        print('Введите целое число от 1 до 12, будьте внимательны ')
